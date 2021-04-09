@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
 * {
   box-sizing: border-box;
 }
@@ -6,10 +6,27 @@
 body {
   font-family: "Roboto", sans-serif;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   overflow: hidden;
   margin: 0;
+}
+
+.bg {
+  background: url(photos/0CD37575-B520-4D51-97C9-3AE827137A48_1_105_c.jpeg)
+    no-repeat center center/cover;
+  /* center for x axis and center for y, center cover for z axis */
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: calc(100vw + 60px); /*even on left and right. removes space on edges*/
+  height: calc(100vh + 60px);
+  z-index: -1; /*want it to be behind the 0% */
+  filter: blur(0px);
+}
+
+.loading-text {
+  font-size: 50px;
+  color: white;
 }
